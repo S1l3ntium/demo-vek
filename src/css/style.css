@@ -1,0 +1,109 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	overflow-x: hidden;
+}
+
+.hero {
+	height: 100%;
+	width: 100vw;
+	background-color: #ffffff;
+	display: grid;
+	place-items: center;
+	font-size: 2rem;
+	user-select: none;
+}
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.scroller {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #f1f3f6;
+}
+
+.scroll-row {
+	display: flex;
+	width: 300vw; /* 3 элемента по 100vw */
+	height: 50vh; /* половина экрана высоты, чтобы две строки поместились */
+	will-change: transform;
+	overflow: visible;
+}
+
+.scroll-element {
+	/* width: 100vw; */
+	height: 100%;
+	box-sizing: border-box;
+	padding: 2rem;
+	background-color: #f1f3f6;
+}
+
+.items-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	gap: 2rem;
+	height: 100%;
+	width: 100%;
+}
+
+.item {
+	border-radius: 1rem;
+}
+
+.item img {
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.grid-1 .item {
+	background-color: #1e1e1e;
+}
+.grid-2 .item {
+	background-color: #2e2e2e;
+}
+.grid-3 .item {
+	background-color: #4e4e4e;
+}
+.grid-4 .item {
+	background-color: #6e6e6e;
+}
+.grid-5 .item {
+	background-color: #8e8e8e;
+}
+
+.item-1 {
+	grid-area: 1 / 1 / 6 / 5;
+}
+
+.item-2 {
+	grid-area: 6 / 1 / 13 / 5;
+}
+
+.item-3 {
+	grid-area: 1 / 5 / 7 / 10;
+}
+
+.item-4 {
+	grid-area: 7 / 5 / 13 / 8;
+}
+
+.item-5 {
+	grid-area: 7 / 8 / 13 / 10;
+}
+
+.item-6 {
+	grid-area: 1 / 10 / 13 / 13;
+}
